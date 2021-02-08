@@ -13,6 +13,8 @@ use Symfony\Component\Messenger\MessageBusInterface;
 
 class EventService
 {
+    const DEFAULT_EMAIL = 'youremail@service.com';
+
     public const EVENT_LIST = [
         'flight_ticket_sales_completed',
         'flight_reject',
@@ -70,7 +72,7 @@ class EventService
                     if (isset($user) && !isset($notifiedUser[$user->getId()])) {
                         $this->_notifyEmail(
                             $user->getEmail(),
-                            'sasulka1512@gmail.com',
+                            self::DEFAULT_EMAIL,
                             'УВЕДОМЛЕНИЕ',
                             $message
                         );
@@ -83,7 +85,7 @@ class EventService
                     if (!isset($notifiedUser[$user->getId()])) {
                         $this->_notifyEmail(
                             $user->getEmail(),
-                            'sasulka1512@gmail.com',
+                            self::DEFAULT_EMAIL,
                             'УВЕДОМЛЕНИЕ',
                             $message
                         );
