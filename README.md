@@ -1,8 +1,8 @@
 Стек:
-nginx
-php-fpm 7.4
-postgresql
-symfony 5.2
+- nginx
+- php-fpm 7.4
+- postgresql
+- symfony 5.2
 
 ВАЖНО! ИЗМЕНИТЬ В .env ДОСТУПЫ К БАЗЕ ДАННЫХ И gmail
 
